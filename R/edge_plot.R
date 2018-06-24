@@ -12,7 +12,8 @@
 #'
 #' @examples
 #' edge_plot(tiles = rep(list(c("black", "white", "blue")), 16))
-
+#' @export
+#' @importFrom magrittr %>%
 edge_plot <- function(tiles = list(c("green", "red", "yellow")
                          ,c("green", "yellow", "white")
                          ,c("white", "white", "blue")
@@ -33,20 +34,20 @@ edge_plot <- function(tiles = list(c("green", "red", "yellow")
 
                          ,c("green", "black", "red"))) {
 
-  tiles <- xy2tlr(data = put_tiles(tiles = tiles),
-                  coord = coord_tern()) %>%
-    ggtern::ggtern(mapping = aes(x, y, z, colour = colour)) +
-    geom_point(size = 4) +
-    scale_colour_identity() +
-    scale_T_continuous(breaks = c(0, .25, .5, .75, 1)) +
-    scale_L_continuous(breaks = c(0, .25, .5, .75, 1)) +
-    scale_R_continuous(breaks = c(0, .25, .5, .75, 1)) +
-    theme_dark() +
-    theme(panel.grid.major = element_line(colour = "white")) +
-    theme_hidegrid_minor() +
-    theme_hidetitles() +
-    theme_hidelabels() +
-    theme_hideticks()
+  tiles <- ggtern::xy2tlr(data = put_tiles(tiles = tiles),
+                          coord = ggtern::coord_tern()) %>%
+    ggtern::ggtern(mapping = ggtern::aes(x, y, z, colour = colour)) +
+    ggplot2::geom_point(size = 4) +
+    ggplot2::scale_colour_identity() +
+    ggtern::scale_T_continuous(breaks = c(0, .25, .5, .75, 1)) +
+    ggtern::scale_L_continuous(breaks = c(0, .25, .5, .75, 1)) +
+    ggtern::scale_R_continuous(breaks = c(0, .25, .5, .75, 1)) +
+    ggplot2::theme_dark() +
+    ggplot2::theme(panel.grid.major = ggplot2::element_line(colour = "white")) +
+    ggtern::theme_hidegrid_minor() +
+    ggtern::theme_hidetitles() +
+    ggtern::theme_hidelabels() +
+    ggtern::theme_hideticks()
 
   return(tiles)
 
