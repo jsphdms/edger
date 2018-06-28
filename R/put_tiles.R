@@ -28,24 +28,24 @@ put_tiles <- function(tiles_in) {
   r <- (2*3^.5+4)^-1
   h <- r * (3^.5+1)
   y <- 3^.5/2
-  tile_seed <- data.frame(x = c(.5-r, .5, .5+r),
-                              y = c(h, r, h))
+  tile_seed <- data.frame(x = c(.5-r, .5+r, .5),
+                              y = c(h, h, r))
 
   tiles_out <- tile_seed %>% {rbind(
     put_tile(.),
-    put_tile(., reflect = TRUE, x = .5),
+    put_tile(., rotate = TRUE, x = .5),
     put_tile(., x = 1),
-    put_tile(., reflect = TRUE, x = 1.5),
+    put_tile(., rotate = TRUE, x = 1.5),
     put_tile(., x = 2),
-    put_tile(., reflect = TRUE, x = 2.5),
+    put_tile(., rotate = TRUE, x = 2.5),
     put_tile(., x = 3),
     put_tile(., x = .5, y = y),
-    put_tile(., reflect = TRUE, x = 1, y = y),
+    put_tile(., rotate = TRUE, x = 1, y = y),
     put_tile(., x = 1.5, y = y),
-    put_tile(., reflect = TRUE, x = 2, y = y),
+    put_tile(., rotate = TRUE, x = 2, y = y),
     put_tile(., x = 2.5, y = y),
     put_tile(., x = 1, y = 2*y),
-    put_tile(., reflect = TRUE, x = 1.5, y = 2*y),
+    put_tile(., rotate = TRUE, x = 1.5, y = 2*y),
     put_tile(., x = 2, y = 2*y),
     put_tile(., x = 1.5, y = 3*y))}
 
