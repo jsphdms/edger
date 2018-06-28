@@ -14,25 +14,7 @@
 #' edge_plot(tiles = rep(list(c("black", "white", "blue")), 16))
 #' @export
 #' @importFrom magrittr %>%
-edge_plot <- function(tiles = list(c("green", "red", "yellow")
-                         ,c("green", "yellow", "white")
-                         ,c("white", "white", "blue")
-                         ,c("blue", "black", "white")
-                         ,c("white", "green", "red")
-                         ,c("black", "green", "red")
-                         ,c("green", "black", "black")
-
-                         ,c("yellow", "green", "white")
-                         ,c("blue", "yellow", "red")
-                         ,c("green", "red", "black")
-                         ,c("blue", "white", "blue")
-                         ,c("white", "black", "blue")
-
-                         ,c("red", "yellow", "white")
-                         ,c("yellow", "black", "blue")
-                         ,c("green", "yellow", "black")
-
-                         ,c("green", "black", "red"))) {
+edge_plot <- function(tiles) {
 
   tiles <- ggtern::xy2tlr(data = put_tiles(tiles = tiles),
                           coord = ggtern::coord_tern()) %>%
