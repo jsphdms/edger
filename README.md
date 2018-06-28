@@ -3,9 +3,11 @@
 edger
 =====
 
-Use edger to solve triangular edge matching puzzles like this one using a [backtracking](https://en.wikipedia.org/wiki/Backtracking) algorithm:
+Use edger to solve triangular edge matching puzzles using a [backtracking](https://en.wikipedia.org/wiki/Backtracking) algorithm. edger is inspired by a puzzle (pictured below) given to me by my brother-in-law's brother and partner and [Ken Shirriff's article](http://www.righto.com/2010/12/solving-edge-match-puzzles-with-arc-and.html) on solving a similar puzzle with [Arc](https://en.wikipedia.org/wiki/Arc_(programming_language)).
 
 <img src="man/figures/IMG_20180624_214503455.jpg" width="30%" style="display: block; margin: auto;" />
+
+There are many types of edge matching puzzles. Some parameters include: shape and number of tiles; the existence of edge constraints like those in the picture; and whether edges match symmetrically or asymetrically (i.e. matching colour to colour, or matching the head of a frog to it's legs). This package solves the puzzle pictured above, ignoring the edge constraints for simplicity. If I feel like it, I might expand edger to solve a broader range of puzzles.
 
 Installation
 ------------
