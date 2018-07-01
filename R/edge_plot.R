@@ -6,8 +6,9 @@
 #'     triangle tiles that will tessalate into a larger triangle.
 #'     \code{tiles} should start with the bottom left tile and end with the
 #'     top tile, moving left to right, row by row. The colours within each
-#'     character vector go along each triangle from left to right (e.g. not
-#'     clock-wise or top to bottom).
+#'     character vector go clock-wise around each triangle, starting with the
+#'     top left dot for triangles pointing upward, and the bottom right dot for
+#'     triangles pointing downward.
 #' @return A ternary diagram displaying the puzzle
 #'
 #' @examples
