@@ -6,10 +6,10 @@
 #' @return Boolean indicating whether \code{tile} will fit onto \code{tiles}.
 #'
 #' @examples
-#' edge_match(tiles = rep(list(c("black", "white", "blue")), 15),
+#' match_edge(tiles = rep(list(c("black", "white", "blue")), 15),
 #'            tile = c("black", "white", "blue"))
 
-edge_match <- function(tiles, tile) {
+match_edge <- function(tiles, tile) {
 
   stopifnot(
     is.list(tiles),
