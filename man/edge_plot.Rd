@@ -4,13 +4,7 @@
 \alias{edge_plot}
 \title{Plot an edge matching puzzle.}
 \usage{
-edge_plot(tiles = list(c("green", "red", "yellow"), c("green", "yellow",
-  "white"), c("white", "white", "blue"), c("blue", "black", "white"), c("white",
-  "green", "red"), c("black", "green", "red"), c("green", "black", "black"),
-  c("yellow", "green", "white"), c("blue", "yellow", "red"), c("green", "red",
-  "black"), c("blue", "white", "blue"), c("white", "black", "blue"), c("red",
-  "yellow", "white"), c("yellow", "black", "blue"), c("green", "yellow",
-  "black"), c("green", "black", "red")))
+edge_plot(tiles)
 }
 \arguments{
 \item{tiles}{List of character vectors of the form
@@ -19,8 +13,9 @@ length 16. This list represents the colours of the dots on 16 equilateral
 triangle tiles that will tessalate into a larger triangle.
 \code{tiles} should start with the bottom left tile and end with the
 top tile, moving left to right, row by row. The colours within each
-character vector go along each triangle from left to right (e.g. not
-clock-wise or top to bottom).}
+character vector go clock-wise around each triangle, starting with the
+top left dot for triangles pointing upward, and the bottom right dot for
+triangles pointing downward.}
 }
 \value{
 A ternary diagram displaying the puzzle

@@ -32,22 +32,28 @@ put_tiles <- function(tiles_in) {
                               y = c(h, h, r))
 
   tiles_out <- tile_seed %>% {rbind(
+
+    put_tile(., x = 1.5, y = 3*y),
+
+    put_tile(., x = 1, y = 2*y),
+    put_tile(., rotate = TRUE, x = 1.5, y = 2*y),
+    put_tile(., x = 2, y = 2*y),
+
+    put_tile(., x = .5, y = y),
+    put_tile(., rotate = TRUE, x = 1, y = y),
+    put_tile(., x = 1.5, y = y),
+    put_tile(., rotate = TRUE, x = 2, y = y),
+    put_tile(., x = 2.5, y = y),
+
     put_tile(.),
     put_tile(., rotate = TRUE, x = .5),
     put_tile(., x = 1),
     put_tile(., rotate = TRUE, x = 1.5),
     put_tile(., x = 2),
     put_tile(., rotate = TRUE, x = 2.5),
-    put_tile(., x = 3),
-    put_tile(., x = .5, y = y),
-    put_tile(., rotate = TRUE, x = 1, y = y),
-    put_tile(., x = 1.5, y = y),
-    put_tile(., rotate = TRUE, x = 2, y = y),
-    put_tile(., x = 2.5, y = y),
-    put_tile(., x = 1, y = 2*y),
-    put_tile(., rotate = TRUE, x = 1.5, y = 2*y),
-    put_tile(., x = 2, y = 2*y),
-    put_tile(., x = 1.5, y = 3*y))}
+    put_tile(., x = 3)
+
+    )}
 
   tiles_out[["colour"]] <- purrr::flatten_chr(tiles_in)
 

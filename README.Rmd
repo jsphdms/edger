@@ -37,23 +37,23 @@ Visually inspect solutions like so:
 
 ```{r example}
 library(edger)
-edge_plot(tiles = list(c("green", "red", "yellow")
-                       ,c("green", "yellow", "white")
+edge_plot(tiles = list(c("green", "red", "yellow")    # Top row
+                       
+                       ,c("green", "yellow", "white") # Second row
                        ,c("white", "white", "blue")
                        ,c("blue", "black", "white")
-                       ,c("white", "green", "red")
+                       
+                       ,c("white", "green", "red")    # Third row
                        ,c("black", "green", "red")
-                       ,c("green", "black", "black")  # Bottom row
-
+                       ,c("green", "black", "black")
                        ,c("yellow", "green", "white")
                        ,c("blue", "yellow", "red")
-                       ,c("green", "red", "black")
+                       
+                       ,c("green", "red", "black")    # Fourth row
                        ,c("blue", "white", "blue")
-                       ,c("white", "black", "blue")   # Second row up
-
+                       ,c("white", "black", "blue")
                        ,c("red", "yellow", "white")
                        ,c("yellow", "black", "blue")
-                       ,c("green", "yellow", "black") # Third row up
-
-                       ,c("green", "black", "red")))  # Top row
+                       ,c("green", "yellow", "black")
+                       ,c("green", "black", "red")))
 ```

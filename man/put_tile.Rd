@@ -4,7 +4,7 @@
 \alias{put_tile}
 \title{Transform a tile.}
 \usage{
-put_tile(tile_in, scale = 0.25, reflect = FALSE, x = 0, y = 0)
+put_tile(tile_in, scale = 0.25, rotate = FALSE, x = 0, y = 0)
 }
 \arguments{
 \item{tile_in}{Data.frame with two columns (x and y) and three rows (one for
@@ -12,7 +12,7 @@ each dot)}
 
 \item{scale}{Numeric between 0 and 1}
 
-\item{reflect}{Boolean specifying whether to relect tile in the y axis (i.e.
+\item{rotate}{Boolean specifying whether to relect tile in the y axis (i.e.
 turn upside down)}
 
 \item{x}{Numeric between 0 and 0.75 for horizontal translation}
@@ -32,5 +32,5 @@ h <- r * (3^.5+1)
 big_tile <- data.frame(x = c(.5-r, .5, .5+r),
                        y = c(h, r, h))
 
-put_tile(tile = big_tile, reflect = TRUE, x = .125)
+put_tile(tile = big_tile, rotate = TRUE, x = .125)
 }
